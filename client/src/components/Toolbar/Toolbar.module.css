@@ -1,6 +1,20 @@
 .Toolbar {
-  width: 100%;
+  /* width: 100vw; */
   color: red;
-  height: 40px;
   color: orange;
+  border: 2px solid pink;
+}
+
+.ToolbarTop {
+  width: 100%;
+  height: 50px;
+  background-color: orange;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Login {
+  color: white;
+  font-weight: 700;
 }
