@@ -17,7 +17,12 @@ const toolbar = props => (
         <Logo />
         <SearchBar />
       </div>
-      <div className={classes.ToolbarBottom}></div>
+      <div className={classes.ToolbarBottom}>
+        <div className={classes.NavigationItem}>Kantenband</div>
+        <div className={classes.NavigationItem}>Lijm machinaal</div>
+        <div className={classes.NavigationItem}>Lijm andere</div>
+        <div className={classes.NavigationItem}>Laden geleiders</div>
+      </div>
     </div>
   </>
 );
