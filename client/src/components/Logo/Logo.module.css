@@ -1,0 +1,29 @@
+.Logo {
+  font-size: 34px;
+  position: relative;
+  /* border: 1px solid black; */
+  display: flex;
+  /* width: 40%; */
+  margin-top: 5px;
+}
+
+.Kanten {
+  font-weight: 700;
+  display: inline;
+}
+
+.Meer {
+  /* font-weight: 540; */
+  display: inline;
+}
+.And {
+  display: inline;
+  color: orange;
+  font-weight: 700;
+}
+
+@media screen and (max-width: 800px) {
+  .Logo {
+    margin-bottom: 20px;
+  }
+}

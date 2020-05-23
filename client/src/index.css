@@ -2,4 +2,10 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  margin: 0px;
+  padding: 0px;
+  /* border-right: 50px solid orange;
+  height: 100vh; */
 }
+
+/* :global .Post { ... }  */
