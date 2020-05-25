@@ -99,6 +99,7 @@
   text-transform: uppercase;
   font-weight: bold;
   font-size: 17px;
+  z-index: 5;
 }
 
 .ToolbarBottom p {

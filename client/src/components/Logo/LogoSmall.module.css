@@ -1,0 +1,25 @@
+.Logo {
+  font-size: 22px;
+  width: 100%;
+  position: relative;
+  /* border: 1px solid black; */
+  display: flex;
+  justify-content: center;
+  /* width: 40%; */
+  padding: 40px;
+}
+
+.Kanten {
+  font-weight: 700;
+  display: inline;
+}
+
+.Meer {
+  /* font-weight: 540; */
+  display: inline;
+}
+.And {
+  display: inline;
+  color: orange;
+  font-weight: 700;
+}

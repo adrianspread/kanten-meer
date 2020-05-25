@@ -2,6 +2,7 @@ import React, { Fragment } from "react";
 import classes from "./Toolbar.module.css";
 import Languages from "../../Languages/Languages";
 import Logo from "../../Logo/Logo";
+import logoStyle from "../../Logo/Logo.module.css";
 import SearchBar from "../../UI/SearchBar/SearchBar";
 
 const toolbar = props => (
@@ -14,7 +15,7 @@ const toolbar = props => (
         <div className={classes.Login}>LOGIN</div>
       </div>
       <div className={classes.ToolbarMiddle}>
-        <Logo />
+        <Logo logoStyle={logoStyle} />
         <SearchBar />
       </div>
 
