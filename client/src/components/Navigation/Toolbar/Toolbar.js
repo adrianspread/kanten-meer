@@ -17,25 +17,58 @@ const toolbar = props => (
         <Logo />
         <SearchBar />
       </div>
+
       <div className={classes.ToolbarBottom}>
-        <div className={classes.NavigationItem}>Kantenband</div>
-        <div className={classes.NavigationItem}>Lijm machinaal</div>
-        <div className={classes.NavigationItem}>Lijm andere</div>
-        <div className={classes.NavigationItem}>Laden geleiders</div>
+        <ul>
+          <li>
+            <p>Kantenband</p>
+            <ul>
+              <li>
+                <p>ABS</p>
+              </li>
+              <li>
+                <p>FINEER</p>
+              </li>
+              <li>
+                <p>PVC</p>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <p>Lijm machinaal</p>
+            <ul>
+              <li>
+                <p>EWA</p>
+              </li>
+              <li>
+                <p>PUR</p>
+              </li>
+              <li>
+                <p>POLYFINE</p>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <p>Lijm andere</p>
+            <ul>
+              <li>
+                <p>HOUTLIJM</p>
+              </li>
+              <li>
+                <p>LAKLIJM</p>
+              </li>
+              <li>
+                <p>SPUITLIJM</p>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <p>Laden geleiders</p>
+          </li>
+        </ul>
       </div>
     </div>
   </>
 );
 
 export default toolbar;
-// <div className={classes.Tomato}></div>
-// <div className={classes.Gold}></div>
-
-// <div className={classes.Oranged}></div>
-
-// <div
-//   className={classes.Darkorange}
-//   style={{ color: "white", fontSize: "800" }}
-// >
-//   Contact
-// </div>

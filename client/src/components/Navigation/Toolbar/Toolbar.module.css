@@ -44,8 +44,8 @@
 }
 
 .ToolbarMiddle {
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 
   width: 100%;
   display: flex;
@@ -65,16 +65,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 20px;
+  /* margin-top: 20px; */
   /* padding-left: 100px;
   padding-right: 110px; */
+  background: black;
+  color: white;
 }
 
 .NavigationItem {
   height: 100%;
-  /* width: 170px; */
-  /* border: 2px solid pink; */
-  /* background-color: rgba(255, 165, 0, 0.7); */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -82,18 +81,58 @@
   font-weight: bold;
   font-size: 17px;
   text-transform: uppercase;
-  /* margin-left: 20px; */
   padding: 20px;
   cursor: pointer;
+  position: relative;
 }
 
 .NavigationItem:hover {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
+.ToolbarBottom ul {
+  /* margin: 0;
+  padding: 0px;
+  border: 2px solid pink; */
+  list-style: none;
+  background: black;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 17px;
+}
+
+.ToolbarBottom p {
+  float: left;
+  width: 180px;
+  height: 70px;
+}
+
+.ToolbarBottom ul li {
+  float: left;
+  width: 180px;
+  height: 70px;
+  text-align: center;
+  line-height: 65px;
+  background: black;
+}
+
+.ToolbarBottom ul li p:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.ToolbarBottom ul li ul li {
+  display: none;
+}
+.ToolbarBottom ul li:hover ul li {
+  display: block;
+}
+
 @media screen and (max-width: 800px) {
   .ToolbarMiddle {
     flex-direction: column;
+  }
+  .ToolbarBottom {
+    display: none;
   }
 }
 
@@ -109,31 +148,4 @@
     padding-left: 20px;
     padding-right: 20px;
   }
-}
-
-.Tomato {
-  width: 100%;
-  height: 60px;
-  background-color: tomato;
-}
-.Coral {
-  width: 100%;
-  height: 60px;
-  background-color: coral;
-}
-.Oranged {
-  width: 100%;
-  height: 60px;
-  background-color: orangered;
-}
-.Gold {
-  width: 100%;
-  height: 60px;
-  background-color: gold;
-}
-.Darkorange {
-  width: 100%;
-  height: 70px;
-  background-color: darkorange;
-  margin-top: 30px;
 }
