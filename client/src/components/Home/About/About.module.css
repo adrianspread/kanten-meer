@@ -4,12 +4,12 @@
   height: 300px;
   /* border: 2px solid blue; */
   object-fit: cover;
-  /* margin-top: 200px; */
+  margin-bottom: 80px;
 }
 
 .Text {
-  margin-bottom: 90px;
-  font-size: 19px;
+  margin-bottom: 190px;
+  font-size: 22px;
   padding: 0 150px;
   width: 100%;
   text-align: center;
