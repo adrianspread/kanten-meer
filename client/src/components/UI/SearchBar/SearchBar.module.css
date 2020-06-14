@@ -4,8 +4,14 @@
   margin-left: 50px;
 }
 
+.InputContainer {
+  width: 600px;
+  position: relative;
+}
+
 .Input {
   width: 600px;
+  height: 100%;
   padding: 7px;
   font-size: 20px;
   border: none;
@@ -34,12 +40,19 @@
 }
 
 @media screen and (max-width: 1000px) {
+  .InputContainer {
+    width: 500px;
+  }
+
   .Input {
     width: 500px;
   }
 }
 
 @media screen and (max-width: 900px) {
+  .InputContainer {
+    width: 400px;
+  }
   .Input {
     width: 400px;
   }
@@ -51,8 +64,11 @@
     margin-left: 0px;
     justify-content: center;
   }
-  .Input {
+
+  .InputContainer {
     width: 80%;
-    /* border: 2px solid green; */
+  }
+  .Input {
+    width: 100%;
   }
 }

@@ -1,0 +1,40 @@
+.Container {
+  border: 1px solid #dcdcdc;
+}
+
+.Proposition {
+  width: 100%;
+  height: 65px;
+  /* border: 2px solid green; */
+  background-color: white;
+  /* padding: 10px; */
+  transition: 0.2s ease;
+  display: flex;
+  align-items: center;
+}
+
+.Proposition:hover {
+  background-color: #d3d3d3;
+}
+
+.ImageContainer {
+  height: 100%;
+  width: 70px;
+  overflow: hidden;
+}
+
+.Image {
+  object-fit: cover;
+  /* width: 100%; */
+  height: 59px;
+}
+
+.ProductNameContainer {
+  width: 100%;
+  height: 100%;
+  padding-left: 25px;
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+  font-weight: 700;
+}
