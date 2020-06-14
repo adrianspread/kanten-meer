@@ -6,14 +6,14 @@ const url = window.location.origin + "/pictures/1.jpg";
 
 const searchProposition = props => (
   <div className={classes.Container}>
-    {props.products.map(products => {
+    {props.products.map(product => {
       return (
         <div className={classes.Proposition}>
           <div className={classes.ImageContainer}>
             <img src={url} alt="{something}" className={classes.Image} />
           </div>
           <div className={classes.ProductNameContainer}>
-            {products.board_supplier}
+            {product.ref_code} {product.material} {product.board_supplier}
           </div>
         </div>
       );

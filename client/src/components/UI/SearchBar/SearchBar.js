@@ -3,6 +3,7 @@ import classes from "./SearchBar.module.css";
 import Search from "../../../assets/UI/search.svg";
 import SearchPropositions from "../../SearchPropositions/SearchPropositions";
 import axios from "axios";
+import { withRouter } from "react-router-dom";
 
 class searchbar extends Component {
   state = {
@@ -23,6 +24,15 @@ class searchbar extends Component {
         this.setState({ ...this.state, products: data.data });
       })
       .catch(err => console.log(err));
+  };
+
+  showProducts = () => {
+    console.log(this.state.searchPhrase);
+
+    this.props.history.push({
+      pathname: "/products",
+      search: "?phrase=" + this.state.searchPhrase
+    });
   };
 
   render() {
@@ -50,6 +60,7 @@ class searchbar extends Component {
             src={Search}
             className={classes.SearchIcon}
             alt={"search icon"}
+            onClick={this.showProducts}
           />
         </div>
       </div>
@@ -57,4 +68,4 @@ class searchbar extends Component {
   }
 }
 
-export default searchbar;
+export default withRouter(searchbar);

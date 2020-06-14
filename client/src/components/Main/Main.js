@@ -2,26 +2,25 @@ import React, { Component } from "react";
 import classes from "./Main.module.css";
 import Home from "../Home/Home";
 import axios from "axios";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+
+import Products from "../Products/Products";
 
 class Main extends Component {
   state = {};
 
-  insertTest() {
-    axios
-      .get("/insert")
-      .then(result => {
-        console.log(result);
-      })
-      .catch(err => console.log(err));
-  }
-
   render() {
     return (
-      <>
-        <div className={classes.Main}>
-          {!this.props.showResults && <Home />}
-        </div>
-      </>
+      <div className={classes.Main}>
+        <Switch>
+          <Route path="/products" component={Products} />
+
+          {/*<Route path="/product" component={Product} />
+           */}
+
+          <Route path="/" component={Home} />
+        </Switch>
+      </div>
     );
   }
 }
