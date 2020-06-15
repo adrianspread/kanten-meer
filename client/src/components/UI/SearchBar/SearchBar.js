@@ -9,25 +9,44 @@ class searchbar extends Component {
   state = {
     searchPhrase: "",
     products: [],
-    dropDown: false
+    dropDown: false,
+    noResults: true
   };
   toggleDropdown() {
     this.setState({ dropDown: !this.state.dropDown });
   }
 
   getProducts = event => {
+    // if (this.state.searchPhrase === "") {
+    //   this.setState({ dropDown: false });
+    // }
     this.setState({ ...this.state, searchPhrase: event.target.value });
-    axios
-      .get("/productphrase/" + event.target.value)
-      .then(data => {
-        console.log(data.data);
-        this.setState({ ...this.state, products: data.data });
-      })
-      .catch(err => console.log(err));
+    if (event.target.value !== "") {
+      axios
+        .get("/productphrase/" + event.target.value)
+        .then(data => {
+          console.log(data.data);
+          let noResults = false;
+          if (data.data.length === 0) {
+            console.log("empty response!!");
+            noResults = true;
+          }
+          this.setState({
+            ...this.state,
+            products: data.data,
+            dropDown: true,
+            noResults: noResults
+          });
+        })
+        .catch(err => console.log(err));
+    } else if (event.target.value === "") {
+      console.log("event.target.value: ", event.target.value);
+      this.setState({ dropDown: false });
+    }
   };
 
   showProducts = () => {
-    console.log(this.state.searchPhrase);
+    // console.log(this.state.searchPhrase);
 
     this.props.history.push({
       pathname: "/products",
@@ -36,6 +55,7 @@ class searchbar extends Component {
   };
 
   render() {
+    // console.log(this.state.products);
     return (
       <div className={classes.Container}>
         <div
@@ -51,7 +71,10 @@ class searchbar extends Component {
             onChange={this.getProducts}
           />
           {this.state.dropDown && (
-            <SearchPropositions products={this.state.products} />
+            <SearchPropositions
+              products={this.state.products}
+              noResults={this.state.noResults}
+            />
           )}
         </div>
 
