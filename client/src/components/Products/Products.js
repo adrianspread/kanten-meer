@@ -50,7 +50,10 @@ class products extends Component {
           Your search for: <b>{this.state.phrase}</b>
         </div>
         <div className={classes.FilterProductsContainer}>
-          <div className={classes.Filters}></div>
+          <div className={classes.Filters}>
+            {" "}
+            Search Filter like on ostermann page{" "}
+          </div>
           <div className={classes.Products}>asd</div>
         </div>
       </div>
