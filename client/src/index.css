@@ -6,6 +6,7 @@ body {
   padding: 0px;
   /* border-right: 50px solid orange;
   height: 100vh; */
+  outline: ;
 }
 
 /* :global .Post { ... }  */
