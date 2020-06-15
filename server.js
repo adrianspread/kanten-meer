@@ -10,30 +10,30 @@ const kantenData = xlsx.utils.sheet_to_json(xlsxFile);
 
 // console.log(kantenData[0]);
 
-// function start(counter) {
-//   if (counter < kantenData.length) {
-//     // setTimeout(function() {
+function start(counter) {
+  if (counter < kantenData.length) {
+    // setTimeout(function() {
 
-//     console.log(counter);
-//
-//     db.insertProduct(
-//       kantenData[counter].ref_code,
-//       kantenData[counter].internal_code,
-//       kantenData[counter].board_supplier,
-//       kantenData[counter].base_material,
-//       kantenData[counter].model,
-//       kantenData[counter].processing_temperature,
-//       kantenData[counter].material,
-//       kantenData[counter].description
-//     )
-//       .then(result => console.log("inserted"))
-//       .catch(err => console.log(err));
-//     counter++;
-//     start(counter);
-//     // }, 50);
-//   }
-// }
-// start(0);
+    console.log(counter);
+
+    db.insertProduct(
+      kantenData[counter].ref_code,
+      kantenData[counter].internal_code,
+      kantenData[counter].board_supplier,
+      kantenData[counter].base_material,
+      kantenData[counter].model,
+      kantenData[counter].processing_temperature,
+      kantenData[counter].material,
+      kantenData[counter].description
+    )
+      .then(result => console.log("inserted"))
+      .catch(err => console.log(err));
+    counter++;
+    start(counter);
+    // }, 50);
+  }
+}
+start(0);
 ////////////////////////////////////////////////////////////////////////////////
 
 app.get("/productphrase/:phrase", (req, res) => {
