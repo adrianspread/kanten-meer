@@ -43,10 +43,18 @@
 
 .Products {
   width: 65%;
-  height: 900px;
+  min-height: 700px;
   /* border: 2px solid green; */
   background: white;
+  padding-bottom: 30px;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 700px) {
+  .Filters {
+    display: none;
+  }
+
+  .Products {
+    width: 100%;
+  }
 }

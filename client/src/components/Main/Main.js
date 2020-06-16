@@ -1,8 +1,7 @@
 import React, { Component } from "react";
 import classes from "./Main.module.css";
 import Home from "../Home/Home";
-import axios from "axios";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 
 import Products from "../Products/Products";
 

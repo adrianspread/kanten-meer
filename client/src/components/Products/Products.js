@@ -31,9 +31,9 @@ class products extends Component {
       }
 
       axios
-        .get("/productphrase/" + phrase)
+        .get("/all/" + phrase)
         .then(data => {
-          console.log(data.data);
+          // console.log(data.data);
           this.setState({
             phrase: phrase,
             products: data.data,
@@ -55,7 +55,10 @@ class products extends Component {
             Search Filters like on ostermann page
           </div>
           <div className={classes.Products}>
-            <Product hits={this.state.products.length} />
+            <Product
+              hits={this.state.products.length}
+              products={this.state.products}
+            />
           </div>
         </div>
       </div>

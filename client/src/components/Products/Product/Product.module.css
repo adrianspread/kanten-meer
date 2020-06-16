@@ -19,3 +19,40 @@
   display: flex;
   justify-content: center;
 }
+
+.Container {
+  border: 1px solid #dcdcdc;
+  /* padding-top: 10px; */
+  background: white;
+  /* padding-top: 5px; */
+}
+
+.ImageContainer {
+  height: 100%;
+  width: 180px;
+
+  overflow: hidden;
+  /* border: 2px solid blue; */
+  /* padding: 0;
+  margin: 0; */
+  display: flex;
+  align-items: center;
+}
+
+.Image {
+  object-fit: cover;
+  width: 140px;
+  height: 140px;
+  /* width: 99px; */
+  display: block;
+}
+
+.ProductNameContainer {
+  width: 100%;
+  height: 100%;
+  padding-left: 25px;
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+  font-weight: 700;
+}

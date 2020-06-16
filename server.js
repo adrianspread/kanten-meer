@@ -54,6 +54,24 @@ app.get("/productphrase/:phrase", (req, res) => {
     .catch(err => console.log(err));
 });
 
+app.get("/all/:phrase", (req, res) => {
+  console.log("*****************************************/GET/all");
+  console.log("req.params.phrase", req.params.phrase);
+
+  let phrase = req.params.phrase;
+  // console.log(req.params);
+
+  // let prawda = req.params === ".";
+  // console.log(prawda);
+
+  db.getByCodeAll(phrase)
+    .then(data => {
+      console.log(data);
+      res.json(data);
+    })
+    .catch(err => console.log(err));
+});
+
 app.get("/api/customers", (req, res) => {
   const customers = [
     { id: 1, firstName: "John", lastName: "Doe" },

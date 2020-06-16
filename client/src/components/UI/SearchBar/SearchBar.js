@@ -12,6 +12,7 @@ class searchbar extends Component {
     dropDown: false,
     noResults: false
   };
+
   toggleDropdown() {
     this.setState({ dropDown: !this.state.dropDown });
   }
@@ -25,10 +26,10 @@ class searchbar extends Component {
       axios
         .get("/productphrase/" + event.target.value)
         .then(data => {
-          console.log(data.data);
+          // console.log(data.data);
           let noResults = false;
           if (data.data.length === 0) {
-            console.log("empty response!!");
+            // console.log("empty response!!");
             noResults = true;
           }
           this.setState({
@@ -40,8 +41,8 @@ class searchbar extends Component {
         })
         .catch(err => console.log(err));
     } else if (event.target.value === "") {
-      console.log("event.target.value: ", event.target.value);
-      this.setState({ dropDown: false });
+      console.log("event.target.value === '' ", event.target.value);
+      this.setState({ dropDown: false, products: [], noResults: false });
     }
   };
 

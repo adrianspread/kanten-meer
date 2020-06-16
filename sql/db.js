@@ -94,6 +94,32 @@ exports.getByCode = function(ref_code) {
     });
 };
 
+exports.getByCodeAll = function(ref_code) {
+  return db
+    .query(
+      `SELECT * FROM
+    	product
+    WHERE
+    	ref_code ILIKE $1
+        OR
+        internal_code ILIKE $1
+        OR
+        board_supplier ILIKE $1
+        OR
+        base_material ILIKE $1
+        OR
+        model ILIKE $1
+        OR
+        material ILIKE $1
+        ;
+`,
+      ["%" + ref_code + "%"]
+    )
+    .then(({ rows }) => {
+      return rows;
+    });
+};
+
 // exports.getUsersByName = function(first) {
 //     return db
 //         .query(
