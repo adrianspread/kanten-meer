@@ -26,7 +26,7 @@ class searchbar extends Component {
       axios
         .get("/productphrase/" + event.target.value)
         .then(data => {
-          // console.log(data.data);
+          console.log(data.data);
           let noResults = false;
           if (data.data.length === 0) {
             // console.log("empty response!!");

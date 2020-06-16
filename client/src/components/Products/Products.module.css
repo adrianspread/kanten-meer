@@ -50,6 +50,13 @@
 }
 
 @media (max-width: 700px) {
+  .Container {
+    background: #fff0e6;
+    /* border: 4px solid red; */
+    /* text-align: center; */
+    padding-left: 20px;
+    padding-right: 20px;
+  }
   .Filters {
     display: none;
   }

@@ -14,9 +14,9 @@ const product = props => (
               <img src={url} alt="{something}" className={classes.Image} />
             </div>
             <div className={classes.ProductNameContainer}>
-              {product.ref_code}&nbsp; &nbsp;
-              {product.material} &nbsp;
-              {product.board_supplier}
+              {product.board_supplier}&nbsp; &nbsp;
+              {product.material}&nbsp;
+              {product.ref_code}
             </div>
           </div>
         );

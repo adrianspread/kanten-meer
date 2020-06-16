@@ -1,8 +1,8 @@
 .ProductTop {
   /* border: 2px solid blue; */
   min-height: 80px;
-  margin-left: 30px;
-  margin-right: 30px;
+  margin-left: 20px;
+  margin-right: 20px;
   border-bottom: 1px solid #dcdcdc;
   display: flex;
   justify-content: flex-start;
@@ -13,11 +13,13 @@
 .Product {
   /* border: 2px solid blue; */
   min-height: 170px;
-  margin-left: 30px;
-  margin-right: 30px;
+  margin-left: 20px;
+  margin-right: 20px;
   border-bottom: 1px solid #dcdcdc;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+  align-items: center;
+  cursor: pointer;
 }
 
 .Container {
@@ -28,31 +30,103 @@
 }
 
 .ImageContainer {
-  height: 100%;
-  width: 180px;
+  /* height: 100%;
+  width: 180px; */
 
   overflow: hidden;
   /* border: 2px solid blue; */
   /* padding: 0;
   margin: 0; */
-  display: flex;
-  align-items: center;
+  /* display: flex;
+  align-items: center; */
+  width: 140px;
+  height: 140px;
 }
 
 .Image {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  width: 140px;
-  height: 140px;
+
   /* width: 99px; */
   display: block;
 }
 
 .ProductNameContainer {
-  width: 100%;
+  /* max-width: 50px; */
   height: 100%;
-  padding-left: 25px;
+  /* margin-left: 30px; */
   display: flex;
   align-items: center;
   font-size: 13px;
   font-weight: 700;
+  /* border: 2px solid red; */
+  flex-wrap: wrap;
+  margin-right: 10px;
+  overflow-wrap: break-word;
+  padding-left: 20px;
+  font-size: 19px;
+}
+
+.ProductNameContainer:hover {
+  color: orange;
+}
+@media (max-width: 1000px) {
+  .ProductNameContainer {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 900px) {
+  .ProductNameContainer {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 800px) {
+  .ProductNameContainer {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 700px) {
+  .ProductNameContainer {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 500px) {
+  .ImageContainer {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+@media (max-width: 400px) {
+  .ImageContainer {
+    /* height: 100%;
+      width: 180px; */
+
+    overflow: hidden;
+    /* border: 2px solid blue; */
+    /* padding: 0;
+      margin: 0; */
+    /* display: flex;
+      align-items: center; */
+    width: 60px;
+    height: 60px;
+  }
+
+  .Product {
+    /* border: 2px solid blue; */
+    min-height: 90px;
+    margin-right: 5px;
+  }
+
+  .ProductNameContainer {
+    /* margin-left: 10px; */
+    height: 120px;
+    margin-left: 10px;
+    font-size: 13px;
+  }
 }
