@@ -10,7 +10,7 @@ class searchbar extends Component {
     searchPhrase: "",
     products: [],
     dropDown: false,
-    noResults: true
+    noResults: false
   };
   toggleDropdown() {
     this.setState({ dropDown: !this.state.dropDown });

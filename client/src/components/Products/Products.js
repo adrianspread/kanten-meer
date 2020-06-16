@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import classes from "./Products.module.css";
 import { withRouter } from "react-router-dom";
 import axios from "axios";
+import Product from "./Product/Product";
 
 class products extends Component {
   state = { phrase: "", products: [], locationSearch: "" };
@@ -51,10 +52,11 @@ class products extends Component {
         </div>
         <div className={classes.FilterProductsContainer}>
           <div className={classes.Filters}>
-            {" "}
-            Search Filter like on ostermann page{" "}
+            Search Filters like on ostermann page
           </div>
-          <div className={classes.Products}>asd</div>
+          <div className={classes.Products}>
+            <Product hits={this.state.products.length} />
+          </div>
         </div>
       </div>
     );

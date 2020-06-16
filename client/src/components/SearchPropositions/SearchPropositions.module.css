@@ -4,3 +4,13 @@
   /* border: 2px solid blue; */
   z-index: 10000;
 }
+
+.NoResults {
+  width: 100%;
+  height: 50px;
+  background: white;
+  border: 1px solid #dcdcdc;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+}

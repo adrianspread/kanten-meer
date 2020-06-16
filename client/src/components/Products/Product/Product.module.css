@@ -1,0 +1,21 @@
+.ProductTop {
+  /* border: 2px solid blue; */
+  min-height: 80px;
+  margin-left: 30px;
+  margin-right: 30px;
+  border-bottom: 1px solid #dcdcdc;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-weight: bold;
+}
+
+.Product {
+  /* border: 2px solid blue; */
+  min-height: 170px;
+  margin-left: 30px;
+  margin-right: 30px;
+  border-bottom: 1px solid #dcdcdc;
+  display: flex;
+  justify-content: center;
+}
