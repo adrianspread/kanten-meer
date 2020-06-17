@@ -1,0 +1,118 @@
+.Container {
+  background: #fff0e6;
+  /* border: 4px solid red; */
+  /* text-align: center; */
+  padding-left: 210px;
+  padding-right: 210px;
+  padding-top: 40px;
+  padding-bottom: 30px;
+  min-height: 400px;
+}
+
+.ProductName {
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.ProductAndOrder {
+  display: flex;
+
+  /* border: 2px solid blue; */
+  /* flex-wrap: wrap; */
+  justify-content: space-around;
+}
+
+.Product {
+  width: 750px;
+  height: 351px;
+  background: white;
+}
+
+.ImageContiner {
+  padding-top: 40px;
+  padding-left: 40px;
+  object-fit: contain;
+}
+
+.Image {
+  width: 70%;
+}
+
+.Order {
+  width: 400px;
+  height: 200px;
+  margin-left: 50px;
+  background: white;
+  display: inline-block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.Button {
+  background: orange;
+  color: white;
+  border: none;
+  width: 85%;
+  height: 30%;
+  font-size: 17px;
+  font-weight: 800;
+  /* margin-top: 40px; */
+}
+
+@media (max-width: 1400px) {
+  .Container {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+
+@media (max-width: 1300px) {
+  .Container {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+@media (max-width: 1200px) {
+  .Order {
+    margin-left: 20px;
+  }
+  .Container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media (max-width: 900px) {
+  .Image {
+    width: 90%;
+  }
+}
+
+@media (max-width: 700px) {
+  .ProductAndOrder {
+    flex-wrap: wrap;
+    /* margin-top: 20px; */
+  }
+
+  .Order {
+    margin: 0px;
+    margin-top: 20px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 400px) {
+  .Container {
+    padding-top: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .ProductName {
+    font-weight: bold;
+    font-size: 16px;
+  }
+}

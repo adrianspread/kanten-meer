@@ -120,13 +120,10 @@ exports.getByCodeAll = function(ref_code) {
     });
 };
 
-// exports.getUsersByName = function(first) {
-//     return db
-//         .query(
-//             `SELECT first, last, picture_url, id FROM users WHERE first ILIKE $1;`,
-//             [first + "%"]
-//         )
-//         .then(({ rows }) => {
-//             return rows;
-//         });
-// };
+exports.getProduct = function(id) {
+  return db
+    .query(`SELECT * FROM product WHERE id = $1`, [id])
+    .then(({ rows }) => {
+      return rows;
+    });
+};

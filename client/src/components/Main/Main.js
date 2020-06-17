@@ -14,7 +14,7 @@ class Main extends Component {
       <div className={classes.Main}>
         <Switch>
           <Route path="/products" component={Products} />
-          <Route path="/product" component={Product} />
+          <Route path="/product/:id" component={Product} />
           <Route path="/" component={Home} />
         </Switch>
       </div>

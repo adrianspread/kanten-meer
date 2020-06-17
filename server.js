@@ -36,6 +36,18 @@ const kantenData = xlsx.utils.sheet_to_json(xlsxFile);
 // start(0);
 ////////////////////////////////////////////////////////////////////////////////
 
+app.get("/product/:id", (req, res) => {
+  console.log("*****************************************/GET/product");
+  console.log("req.params.id", req.params.id);
+
+  db.getProduct(req.params.id)
+    .then(data => {
+      console.log(data);
+      res.json(data);
+    })
+    .catch(err => console.log(err));
+});
+
 app.get("/productphrase/:phrase", (req, res) => {
   console.log("*****************************************/GET/prodyctphrase");
   console.log("req.params.phrase", req.params.phrase);

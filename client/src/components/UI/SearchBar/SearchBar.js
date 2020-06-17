@@ -14,7 +14,12 @@ class searchbar extends Component {
   };
 
   toggleDropdown() {
+    // if (this.state.dropDown === true) {
+    //   // window.location.reload(true);
+    //   this.setState({ dropDown: false });
+    // } else {
     this.setState({ dropDown: !this.state.dropDown });
+    // }
   }
 
   getProducts = event => {
@@ -56,7 +61,7 @@ class searchbar extends Component {
   };
 
   render() {
-    // console.log(this.state.products);
+    // console.log(this.state);
     return (
       <div className={classes.Container}>
         <div
