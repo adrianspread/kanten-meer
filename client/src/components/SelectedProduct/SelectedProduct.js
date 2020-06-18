@@ -29,7 +29,7 @@ class selectedProduct extends Component {
     ) {
       // console.log("get product!!");
       axios
-        .get("/product/" + this.props.match.params.id)
+        .get("/product/" + this.props.match.params.id + ".json")
         .then(data => {
           console.log(data.data);
 
