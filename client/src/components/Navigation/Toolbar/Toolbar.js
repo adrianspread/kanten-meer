@@ -4,6 +4,7 @@ import Languages from "../../Languages/Languages";
 import Logo from "../../Logo/Logo";
 import logoStyle from "../../Logo/Logo.module.css";
 import SearchBar from "../../UI/SearchBar/SearchBar";
+import { Link } from "react-router-dom";
 
 const toolbar = props => (
   <>
@@ -15,7 +16,9 @@ const toolbar = props => (
         <div className={classes.Login}>LOGIN</div>
       </div>
       <div className={classes.ToolbarMiddle}>
-        <Logo logoStyle={logoStyle} />
+        <Link to="/" style={{ color: "black", textDecoration: "none" }}>
+          <Logo logoStyle={logoStyle} />
+        </Link>
         <SearchBar />
       </div>
 

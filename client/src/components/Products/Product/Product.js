@@ -1,5 +1,6 @@
 import React from "react";
 import classes from "./Product.module.css";
+import { Link } from "react-router-dom";
 
 const url = window.location.origin + "/pictures/1.jpg";
 
@@ -9,16 +10,21 @@ const product = props => (
     {props.products &&
       props.products.map(product => {
         return (
-          <div className={classes.Product} key={product.id}>
-            <div className={classes.ImageContainer}>
-              <img src={url} alt="{something}" className={classes.Image} />
+          <Link
+            to={"/product/" + product.id}
+            style={{ textDecoration: "none", color: "black" }}
+          >
+            <div className={classes.Product} key={product.id}>
+              <div className={classes.ImageContainer}>
+                <img src={url} alt="{something}" className={classes.Image} />
+              </div>
+              <div className={classes.ProductNameContainer}>
+                {product.board_supplier}&nbsp; &nbsp;
+                {product.material}&nbsp;
+                {product.ref_code}
+              </div>
             </div>
-            <div className={classes.ProductNameContainer}>
-              {product.board_supplier}&nbsp; &nbsp;
-              {product.material}&nbsp;
-              {product.ref_code}
-            </div>
-          </div>
+          </Link>
         );
       })}
   </>

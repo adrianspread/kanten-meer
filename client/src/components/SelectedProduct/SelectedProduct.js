@@ -15,6 +15,7 @@ class selectedProduct extends Component {
     // console.log(this.props.history);
     // console.log(this.props.match.params.id);
     // console.log(this.props.location.pathname);
+    window.scrollTo(0, 0);
   }
 
   componentDidUpdate() {
