@@ -4,7 +4,12 @@ import SearchProposition from "./SearchProposition/SearchProposition.js";
 
 const searchPropositions = props => (
   <div className={classes.Propositions} onClick={props.log}>
-    {!props.noResults && <SearchProposition products={props.products} />}
+    {!props.noResults && (
+      <SearchProposition
+        products={props.products}
+        searchPhrase={props.searchPhrase}
+      />
+    )}
     {props.noResults && <div className={classes.NoResults}>No results</div>}
   </div>
 );

@@ -1,5 +1,9 @@
 import React from "react";
 import classes from "./SearchProposition.module.css";
+
+import ReactDOM from "react-dom";
+import Highlighter from "react-highlight-words";
+
 // import Picture from "/pictures/avatar.jpg";
 import { withRouter } from "react-router-dom";
 const url = window.location.origin + "/pictures/1.jpg";
@@ -21,9 +25,22 @@ const searchProposition = props => (
                 <img src={url} alt="{something}" className={classes.Image} />
               </div>
               <div className={classes.ProductNameContainer}>
-                {product.ref_code}&nbsp; &nbsp;
+                <Highlighter
+                  highlightClassName="YourHighlightClass"
+                  searchWords={props.searchPhrase.split(" ")}
+                  autoEscape={true}
+                  textToHighlight={
+                    product.ref_code +
+                    " " +
+                    product.material +
+                    " " +
+                    product.board_supplier
+                  }
+                />
+                {/*{product.ref_code}&nbsp; &nbsp;
                 {product.material} &nbsp;
                 {product.board_supplier}
+*/}
               </div>
             </div>
           );

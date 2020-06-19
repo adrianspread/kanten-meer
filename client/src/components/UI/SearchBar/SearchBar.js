@@ -19,7 +19,6 @@ class searchbar extends Component {
     //   this.setState({ dropDown: false });
     // } else {
     this.setState({ dropDown: !this.state.dropDown });
-    // }
   }
 
   getProducts = event => {
@@ -80,6 +79,7 @@ class searchbar extends Component {
             <SearchPropositions
               products={this.state.products}
               noResults={this.state.noResults}
+              searchPhrase={this.state.searchPhrase}
             />
           )}
         </div>
