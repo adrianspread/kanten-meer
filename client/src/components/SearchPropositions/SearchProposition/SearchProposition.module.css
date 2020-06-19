@@ -52,8 +52,17 @@
   padding-left: 25px;
   display: flex;
   align-items: center;
-  font-size: 13px;
+}
+
+.ProductText {
   font-weight: 700;
+
+  /* width: 90%;
+  color: red; */
+}
+
+.ProductTextHighlight {
+  color: pink;
 }
 
 @media (max-width: 400px) {

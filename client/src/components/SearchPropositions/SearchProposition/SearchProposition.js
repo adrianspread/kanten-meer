@@ -26,7 +26,7 @@ const searchProposition = props => (
               </div>
               <div className={classes.ProductNameContainer}>
                 <Highlighter
-                  highlightClassName="YourHighlightClass"
+                  unhighlightClassName={classes.ProductText}
                   searchWords={props.searchPhrase.split(" ")}
                   autoEscape={true}
                   textToHighlight={
@@ -37,10 +37,6 @@ const searchProposition = props => (
                     product.board_supplier
                   }
                 />
-                {/*{product.ref_code}&nbsp; &nbsp;
-                {product.material} &nbsp;
-                {product.board_supplier}
-*/}
               </div>
             </div>
           );
@@ -52,3 +48,7 @@ const searchProposition = props => (
 
 export default withRouter(searchProposition);
 //////
+
+// {product.ref_code}&nbsp; &nbsp;
+// {product.material} &nbsp;
+// {product.board_supplier}
