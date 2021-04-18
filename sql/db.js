@@ -43,10 +43,10 @@ exports.insertProduct = function(
     .then(({ rows }) => rows);
 };
 
+
 // exports.getByCode = function(ref_code) {
 //   return db.query(`SELECT * FROM product WHERE description = $1;`, [ref_code]);
 // };
-
 ////////////////////////////////////////////////////////////////////////////////
 //WORKING
 // exports.getByCode = function() {

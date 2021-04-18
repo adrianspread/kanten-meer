@@ -1,10 +1,8 @@
 import React from "react";
 import classes from "./SearchProposition.module.css";
 
-import ReactDOM from "react-dom";
 import Highlighter from "react-highlight-words";
 
-// import Picture from "/pictures/avatar.jpg";
 import { withRouter } from "react-router-dom";
 const url = window.location.origin + "/pictures/1.jpg";
 
@@ -47,8 +45,3 @@ const searchProposition = props => (
 );
 
 export default withRouter(searchProposition);
-//////
-
-// {product.ref_code}&nbsp; &nbsp;
-// {product.material} &nbsp;
-// {product.board_supplier}

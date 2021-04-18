@@ -1,5 +1,4 @@
 .Container {
-  /* border: 2px solid red; */
   display: flex;
   margin-left: 50px;
 }
@@ -21,9 +20,7 @@
 .Button {
   width: 42px;
   height: 42px;
-  /* background-color: rgb(255, 165, 0, 0.5); */
   background-color: orange;
-
   display: flex;
   justify-content: center;
   align-items: center;

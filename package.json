@@ -29,7 +29,7 @@
     "mdbreact": "^4.27.0",
     "react-highlight-words": "^0.16.0",
     "react-router-dom": "^5.2.0",
-    "spiced-pg": "^1.0.0",
+    "spiced-pg": "^1.0.4",
     "xlsx": "^0.16.2"
   },
   "devDependencies": {

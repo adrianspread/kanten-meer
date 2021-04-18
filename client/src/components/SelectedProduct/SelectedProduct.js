@@ -10,11 +10,6 @@ class selectedProduct extends Component {
 
   componentDidMount() {
     this.getProduct();
-    // console.log(this.state.locationSearch);
-    // console.log(this.props.location.search);
-    // console.log(this.props.history);
-    // console.log(this.props.match.params.id);
-    // console.log(this.props.location.pathname);
     window.scrollTo(0, 0);
   }
 
@@ -27,17 +22,13 @@ class selectedProduct extends Component {
       !this.state.pathname ||
       this.state.pathname !== this.props.location.pathname
     ) {
-      // console.log("get product!!");
       axios
         .get("/product/" + this.props.match.params.id + ".json")
         .then(data => {
-          console.log(data.data);
-
           this.setState({
             product: data.data,
             pathname: this.props.location.pathname
           });
-          console.log(this.state.product[0].id);
         })
         .catch(err => console.log(err));
     }

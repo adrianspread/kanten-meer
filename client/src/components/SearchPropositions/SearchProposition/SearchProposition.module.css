@@ -1,18 +1,12 @@
 .Container {
   border: 1px solid #dcdcdc;
-  /* padding-top: 10px; */
   background: white;
-  /* padding-top: 5px; */
   box-shadow: 0 2px 3px #ccc;
 }
 
 .Proposition {
   width: 100%;
-  /* height: 65px; */
-
-  /* border: 2px solid green; */
   background-color: white;
-  /* padding: 10px; */
   transition: 0.2s ease;
   display: flex;
   align-items: center;
@@ -20,7 +14,6 @@
   padding-bottom: 5px;
   padding-top: 5px;
   padding-left: 5px;
-  /* border: 1px solid #dcdcdc; */
   cursor: pointer;
 }
 
@@ -32,16 +25,12 @@
   height: 100%;
   width: 70px;
   overflow: hidden;
-  /* border: 2px solid blue; */
-  /* padding: 0;
-  margin: 0; */
   display: flex;
   align-items: center;
 }
 
 .Image {
   object-fit: cover;
-  /* width: 100%; */
   height: 65px;
   display: block;
 }
@@ -56,9 +45,6 @@
 
 .ProductText {
   font-weight: 700;
-
-  /* width: 90%;
-  color: red; */
 }
 
 .ProductTextHighlight {
@@ -73,7 +59,6 @@
 
   .Image {
     object-fit: cover;
-    /* width: 100%; */
     height: 50px;
     display: block;
   }

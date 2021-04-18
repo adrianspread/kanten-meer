@@ -4,12 +4,12 @@ const port = process.env.PORT || 5000;
 const path = require("path");
 const db = require("./sql/db");
 const xlsx = require("xlsx");
+
 //PAGE DATA
 const xlsxFile = xlsx.readFile("./sql/kanten.xlsx").Sheets["Sheet1"];
 const kantenData = xlsx.utils.sheet_to_json(xlsxFile);
 
 // console.log(kantenData[0]);
-
 // function start(counter) {
 //   if (counter < kantenData.length) {
 //     // setTimeout(function() {
@@ -34,12 +34,8 @@ const kantenData = xlsx.utils.sheet_to_json(xlsxFile);
 //   }
 // }
 // start(0);
-////////////////////////////////////////////////////////////////////////////////
 
 app.get("/product/:id.json", (req, res) => {
-  console.log("*****************************************/GET/product");
-  console.log("req.params.id", req.params.id);
-
   db.getProduct(req.params.id)
     .then(data => {
       console.log(data);
@@ -49,14 +45,8 @@ app.get("/product/:id.json", (req, res) => {
 });
 
 app.get("/productphrase/:phrase", (req, res) => {
-  console.log("*****************************************/GET/prodyctphrase");
-  console.log("req.params.phrase", req.params.phrase);
 
   let phrase = req.params.phrase;
-  // console.log(req.params);
-
-  // let prawda = req.params === ".";
-  // console.log(prawda);
 
   db.getByCode(phrase)
     .then(data => {
@@ -67,14 +57,7 @@ app.get("/productphrase/:phrase", (req, res) => {
 });
 
 app.get("/all/:phrase", (req, res) => {
-  console.log("*****************************************/GET/all");
-  console.log("req.params.phrase", req.params.phrase);
-
   let phrase = req.params.phrase;
-  // console.log(req.params);
-
-  // let prawda = req.params === ".";
-  // console.log(prawda);
 
   db.getByCodeAll(phrase)
     .then(data => {
@@ -82,15 +65,6 @@ app.get("/all/:phrase", (req, res) => {
       res.json(data);
     })
     .catch(err => console.log(err));
-});
-
-app.get("/api/customers", (req, res) => {
-  const customers = [
-    { id: 1, firstName: "John", lastName: "Doe" },
-    { id: 2, firstName: "Brad", lastName: "Traversy" },
-    { id: 3, firstName: "Mary", lastName: "Swanson" }
-  ];
-  res.json(customers);
 });
 
 if (process.env.NODE_ENV === "production") {

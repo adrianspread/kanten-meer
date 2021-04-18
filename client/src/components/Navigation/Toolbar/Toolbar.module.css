@@ -21,7 +21,6 @@
 
 .Languages {
   height: 50px;
-  /* border: 2px solid white; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -46,28 +45,19 @@
 .ToolbarMiddle {
   padding-top: 60px;
   padding-bottom: 60px;
-
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  /* margin-top: 20px; */
-  /* padding: 0px 423px; */
-  /* padding-left: 130px; */
 }
 
 .ToolbarBottom {
   width: 100%;
   height: 70px;
-  /* background-color: orange; */
   background-color: black;
-
   display: flex;
   justify-content: center;
   align-items: center;
-  /* margin-top: 20px; */
-  /* padding-left: 100px;
-  padding-right: 110px; */
   background: black;
   color: white;
 }
@@ -91,9 +81,6 @@
 }
 
 .ToolbarBottom ul {
-  /* margin: 0;
-  padding: 0px;
-  border: 2px solid pink; */
   list-style: none;
   background: black;
   text-transform: uppercase;

@@ -14,17 +14,10 @@ class searchbar extends Component {
   };
 
   toggleDropdown() {
-    // if (this.state.dropDown === true) {
-    //   // window.location.reload(true);
-    //   this.setState({ dropDown: false });
-    // } else {
     this.setState({ dropDown: !this.state.dropDown });
   }
 
   getProducts = event => {
-    // if (this.state.searchPhrase === "") {
-    //   this.setState({ dropDown: false });
-    // }
     this.setState({ ...this.state, searchPhrase: event.target.value });
     if (event.target.value !== "") {
       axios
@@ -33,7 +26,6 @@ class searchbar extends Component {
           console.log(data.data);
           let noResults = false;
           if (data.data.length === 0) {
-            // console.log("empty response!!");
             noResults = true;
           }
           this.setState({
@@ -45,14 +37,11 @@ class searchbar extends Component {
         })
         .catch(err => console.log(err));
     } else if (event.target.value === "") {
-      console.log("event.target.value === '' ", event.target.value);
       this.setState({ dropDown: false, products: [], noResults: false });
     }
   };
 
   showProducts = () => {
-    // console.log(this.state.searchPhrase);
-
     this.props.history.push({
       pathname: "/products",
       search: "?phrase=" + this.state.searchPhrase
@@ -60,7 +49,6 @@ class searchbar extends Component {
   };
 
   render() {
-    // console.log(this.state);
     return (
       <div className={classes.Container}>
         <div

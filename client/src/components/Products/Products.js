@@ -33,7 +33,6 @@ class products extends Component {
       axios
         .get("/all/" + phrase)
         .then(data => {
-          // console.log(data.data);
           this.setState({
             phrase: phrase,
             products: data.data,

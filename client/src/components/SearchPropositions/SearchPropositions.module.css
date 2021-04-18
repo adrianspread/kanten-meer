@@ -1,7 +1,6 @@
 .Propositions {
   position: absolute;
   width: 100%;
-  /* border: 2px solid blue; */
   z-index: 10000;
 }
 
